@@ -58,7 +58,7 @@ namespace Arreglos_Bidimensionales
                 {
                     if (i==j)
                     {
-                        Arreglo1[i.j] = 3;
+                        Arreglo1[i,j] = 3;
                     }
                     else
                     {
