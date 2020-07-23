@@ -53,6 +53,7 @@ namespace Arreglos_Bidimensionales
             ImprimirInt(Arreglo1);
             Console.WriteLine();
             Console.WriteLine("Llenando la matriz");
+            Console.WriteLine();
             for (int i = 0; i < 4; i++)
             {
                 for (int j = 0; j < 4; j++)
@@ -68,6 +69,7 @@ namespace Arreglos_Bidimensionales
                 }
             }
             ImprimirInt(Arreglo1);
+            Console.WriteLine();
             Console.WriteLine("Presione una tecla para continuar");
             Console.ReadKey();
 
