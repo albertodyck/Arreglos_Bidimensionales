@@ -18,7 +18,7 @@ namespace Arreglos_Bidimensionales
                 Console.Clear();
                 Console.WriteLine("Seleccione el Ejercicio:");
                 Console.WriteLine();
-                Console.WriteLine("1.-Matriz N*N llena de unos, excepto en diagonal");
+                Console.WriteLine("1.-Matriz 4X4 llena de 1, excepto en diagonal");
                 Console.WriteLine("5.-Salir");
                 try
                 {
@@ -48,7 +48,7 @@ namespace Arreglos_Bidimensionales
         {
             Console.Clear();
             Console.WriteLine("Usted selecciono el ejercicio:Matriz N*N llena de unos, excepto en diagonal");
-            Console.WriteLine("El programa llenara de unos una matriz de 4X4, excepto en la diagonal principal donde asiganara 3");
+            Console.WriteLine("El programa llenara de 1 una matriz de 4X4, excepto en la diagonal principal donde asiganara 3");
             Console.WriteLine();
             ImprimirInt(Arreglo1);
             Console.WriteLine("Llenando la matriz");
@@ -100,7 +100,7 @@ namespace Arreglos_Bidimensionales
                 {
                     for (int j = 0; j < columnaLenght; j++)
                     {
-                        Console.Write($"{Arreglo[i,j]}");
+                        Console.Write($" {Arreglo[i,j]} ");
                     }
                     Console.WriteLine();
                 }
