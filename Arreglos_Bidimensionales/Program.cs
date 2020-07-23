@@ -51,6 +51,7 @@ namespace Arreglos_Bidimensionales
             Console.WriteLine("El programa llenara de 1 una matriz de 4X4, excepto en la diagonal principal donde asiganara 3");
             Console.WriteLine();
             ImprimirInt(Arreglo1);
+            Console.WriteLine();
             Console.WriteLine("Llenando la matriz");
             for (int i = 0; i < 4; i++)
             {
@@ -98,8 +99,25 @@ namespace Arreglos_Bidimensionales
 
                 for (int i = 0; i < renglonLenght; i++)
                 {
+                    if (i==0)
+                    {
+                        for (int k = 1; k <= columnaLenght; k++)
+                        {
+                            if (k==1)
+                            {
+                                Console.Write($"   |");
+                            }
+                            Console.Write($" {k} ");
+                        }
+                        Console.WriteLine();
+                        Console.WriteLine("------------------------");
+                    }
                     for (int j = 0; j < columnaLenght; j++)
                     {
+                        if (j==0)
+                        {
+                            Console.Write($" {i+1} |");
+                        }
                         Console.Write($" {Arreglo[i,j]} ");
                     }
                     Console.WriteLine();
