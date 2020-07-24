@@ -21,6 +21,7 @@ namespace Arreglos_Bidimensionales
                 Console.WriteLine();
                 Console.WriteLine("1.-Matriz 4X4 llena de 1, excepto en diagonal");
                 Console.WriteLine("2.-Matriz transpuesta");
+                Console.WriteLine("3.-Matriz Intercambiada");
                 Console.WriteLine("5.-Salir");
                 try
                 {
@@ -41,6 +42,9 @@ namespace Arreglos_Bidimensionales
                         break;
                     case 2:
                         MatrizTranspuesta();
+                        break;
+                    case 3:
+                        MatrizIntercambiada();
                         break;
                     case 5:
                         bandera = true;
