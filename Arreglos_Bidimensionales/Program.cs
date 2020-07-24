@@ -41,6 +41,7 @@ namespace Arreglos_Bidimensionales
                         break;
                     case 2:
                         MatrizTranspuesta();
+                        break;
                     case 5:
                         bandera = true;
                         break;
