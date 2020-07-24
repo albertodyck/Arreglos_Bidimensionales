@@ -9,6 +9,7 @@ namespace Arreglos_Bidimensionales
     class Program
     {
         static int[,] Arreglo1 = new int[4, 4];
+        
         static void Main(string[] args)
         {
             bool bandera = false;
@@ -19,6 +20,7 @@ namespace Arreglos_Bidimensionales
                 Console.WriteLine("Seleccione el Ejercicio:");
                 Console.WriteLine();
                 Console.WriteLine("1.-Matriz 4X4 llena de 1, excepto en diagonal");
+                Console.WriteLine("2.-Matriz transpuesta");
                 Console.WriteLine("5.-Salir");
                 try
                 {
@@ -37,11 +39,29 @@ namespace Arreglos_Bidimensionales
                     case 1:
                         LLenaDeCerosSinDiagonal();
                         break;
+                    case 2:
+                        MatrizTranspuesta();
                     case 5:
                         bandera = true;
                         break;
                 }
             }
+        }
+
+        private static void MatrizTranspuesta()
+        {
+            Console.Clear();
+            Console.WriteLine("Usted selecciono el ejercicio:Matriz Transpuesta");
+            Console.WriteLine("intercambiar diagonalmente los elementos de la matriz, es decir, sus columnas por sus filas, o viceversa.Los números en la diagonal principal no cambian");
+            Console.WriteLine();
+            Console.WriteLine("Llenando la matriz");
+            Console.WriteLine();
+            int[,] Arreglo2 = { { 1, 2, 3, 4}, { 6, 7, 8, 9}, { 10, 11, 12, 13}, { 14, 15, 16, 17} };
+            ImprimirInt(Arreglo2);
+            Console.WriteLine();
+            TransponerMatriz(Arreglo2);
+            Console.WriteLine("Presione una tecla para continuar");
+            Console.ReadKey();
         }
 
         private static void LLenaDeCerosSinDiagonal()
@@ -125,6 +145,32 @@ namespace Arreglos_Bidimensionales
                     Console.WriteLine();
                 }
             }
+        }
+
+        private static void TransponerMatriz(int[,] Arreglo)
+        { 
+            //obtener el tamaño de los renglones de la matriz
+            int renglonLenght = Arreglo.GetLength(0);
+            //obtener el tamaño de las columnas de la matriz
+            int columnaLenght = Arreglo.GetLength(1);
+            //definir tamaño de matriz con valores obtenidos
+            int[,] ArregloTrans = new int[renglonLenght, columnaLenght];
+            for (int i = 0; i < renglonLenght; i++)
+            {
+                for (int j = 0; j < columnaLenght; j++)
+                {
+                    if (i==j)
+                    {
+                        ArregloTrans[i, j] = Arreglo[i, j];
+                    }
+                    else
+                    {
+                        ArregloTrans[i, j] = Arreglo[j, i];
+                    }
+                }
+            }
+            ImprimirInt(ArregloTrans);
+            Console.WriteLine();
         }
 
     }
