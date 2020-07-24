@@ -53,6 +53,24 @@ namespace Arreglos_Bidimensionales
             }
         }
 
+        private static void MatrizIntercambiada()
+        {
+            Console.Clear();
+            Console.WriteLine("Usted selecciono el ejercicio:Matriz Intercambiada");
+            Console.WriteLine("Programa que intercambia por renglon los elementos de un arreglo bidimensional.");
+            Console.WriteLine("Los elementos del renglon 1 deben intercambiarse con los elementos del renglon N,");
+            Console.WriteLine("Los del renglon 2 con los del N-1, y asi sucesivamente");
+            Console.WriteLine();
+            Console.WriteLine("Llenando la matriz");
+            Console.WriteLine();
+            int[,] Arreglo3 = { { 21, 22, 23, 24 }, { 26, 27, 28, 29 }, { 10, 11, 12, 13 }, { 14, 15, 16, 17 } };
+            ImprimirInt(Arreglo3);
+            Console.WriteLine();
+            IntercambiarMatriz(Arreglo3);
+            Console.WriteLine("Presione una tecla para continuar");
+            Console.ReadKey();
+        }
+
         private static void MatrizTranspuesta()
         {
             Console.Clear();
@@ -175,6 +193,25 @@ namespace Arreglos_Bidimensionales
                 }
             }
             ImprimirInt(ArregloTrans);
+            Console.WriteLine();
+        }
+
+        private static void IntercambiarMatriz(int[,] Arreglo)
+        {
+            //obtener el tamaño de los renglones de la matriz
+            int renglonLenght = Arreglo.GetLength(0);
+            //obtener el tamaño de las columnas de la matriz
+            int columnaLenght = Arreglo.GetLength(1);
+            //definir tamaño de matriz con valores obtenidos
+            int[,] ArregloCambio = new int[renglonLenght, columnaLenght];
+            for (int i = 0; i < renglonLenght; i++)
+            {
+                for (int j = 0; j < columnaLenght; j++)
+                {
+                    ArregloCambio[renglonLenght - i, j] = Arreglo[i, j];
+                }
+            }
+            ImprimirInt(ArregloCambio);
             Console.WriteLine();
         }
 
