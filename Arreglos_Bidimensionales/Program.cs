@@ -208,7 +208,7 @@ namespace Arreglos_Bidimensionales
             {
                 for (int j = 0; j < columnaLenght; j++)
                 {
-                    ArregloCambio[renglonLenght - i, j] = Arreglo[i, j];
+                    ArregloCambio[renglonLenght - i -1, j] = Arreglo[i, j];
                 }
             }
             ImprimirInt(ArregloCambio);
